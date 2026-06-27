@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saree Store</title>
+<link rel="stylesheet" href="project.css">
+
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#111;
+}
+
+/* =========================
+   HEADER SLIDESHOW
+========================= */
+
+header{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+
+/* SLIDES */
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-size:cover;
+    background-position:center;
+    opacity:0;
+    animation:slider 20s infinite;
+}
+
+/* FASHION IMAGES */
+
+.slide1{
+    background-image:url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1600&auto=format&fit=crop');
+    animation-delay:0s;
+}
+
+.slide2{
+    background-image:url('https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1600&auto=format&fit=crop');
+    animation-delay:5s;
+}
+
+.slide3{
+    background-image:url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1600&auto=format&fit=crop');
+    animation-delay:10s;
+}
+
+.slide4{
+    background-image:url('https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=1600&auto=format&fit=crop');
+    animation-delay:15s;
+}
+
+/* SLIDE ANIMATION */
+
+@keyframes slider{
+
+    0%{
+        opacity:0;
+        transform:scale(1);
+    }
+
+    5%{
+        opacity:1;
+    }
+
+    25%{
+        opacity:1;
+        transform:scale(1.08);
+    }
+
+    30%{
+        opacity:0;
+    }
+
+    100%{
+        opacity:0;
+    }
+}
+
+/* DARK OVERLAY */
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.45);
+    z-index:1;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:absolute;
+    top:0;
+    width:100%;
+    padding:25px 80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:3;
+}
+
+.logo{
+    color:#fff;
+    font-size:34px;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#ffb703;
+}
+
+/* HERO CONTENT */
+
+.hero{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:white;
+    z-index:3;
+    width:90%;
+}
+
+.hero h1{
+    font-size:75px;
+    margin-bottom:20px;
+    letter-spacing:4px;
+    animation:fadeUp 2s ease;
+}
+
+.hero p{
+    font-size:24px;
+    margin-bottom:35px;
+    letter-spacing:2px;
+    animation:fadeUp 3s ease;
+}
+
+.hero button{
+    padding:16px 42px;
+    border:none;
+    border-radius:40px;
+    background:#ffb703;
+    color:#111;
+    font-size:18px;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.hero button:hover{
+    background:white;
+    transform:scale(1.05);
+}
+
+/* TEXT ANIMATION */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* DOTS */
+
+.dots{
+    position:absolute;
+    bottom:30px;
+    width:100%;
+    text-align:center;
+    z-index:4;
+}
+
+.dot{
+    display:inline-block;
+    width:14px;
+    height:14px;
+    margin:0 7px;
+    border-radius:50%;
+    background:white;
+    opacity:.5;
+    animation:dotAnim 20s infinite;
+}
+
+.dot:nth-child(1){ animation-delay:0s; }
+.dot:nth-child(2){ animation-delay:5s; }
+.dot:nth-child(3){ animation-delay:10s; }
+.dot:nth-child(4){ animation-delay:15s; }
+
+@keyframes dotAnim{
+
+    0%{
+        opacity:.5;
+        transform:scale(1);
+    }
+
+    5%{
+        opacity:1;
+        transform:scale(1.5);
+        background:#ffb703;
+    }
+
+    25%{
+        opacity:1;
+    }
+
+    30%{
+        opacity:.5;
+        transform:scale(1);
+        background:white;
+    }
+
+    100%{
+        opacity:.5;
+    }
+}
+
+/* OPTIONAL CONTENT SECTION */
+
+.section{
+    padding:80px 10%;
+    background:white;
+    text-align:center;
+}
+
+.section h2{
+    font-size:42px;
+    margin-bottom:20px;
+    color:#222;
+}
+
+.section p{
+    font-size:18px;
+    color:#555;
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+}
+
+</style>
+
+</head>
+
+
+
+
+
+<!-- <body> -->
+
+<!-- 
+<header>
+    <div class="logo">ETHNIC HUB</div>
+
+    <nav>
+        <ul>
+            <li><a href="project.html">HOME</a></li>
+            <li><a href="WOMEN.HTML">WOMEN</a></li>
+            <li><a href="men.html">MEN</a></li>
+            <li><a href="KIDS.HTML">KIDS</a></li>
+        </ul>
+    </nav>
+     -->
+    <!-- <div class="menu">
+        <span></span><BUtton>MY ACCOUNT</BUtton>
+        <span></span><BUTTOn>CART</BUTTOn>
+    </div> -->
+<!-- </header> -->
+
+<!-- Hero Section
+<section class="hero">
+
+    <div class="hero-text">
+        <h1>Designer Sarees<br>To Enhance Your Look</h1>
+    </div>
+    <div class="hero-image">
+    </div>
+   </section> -->
+   
+
+
+
+
+
+
+
+
+
+   <body>
+
+<!-- HEADER -->
+<header>
+
+    <!-- SLIDES -->
+    <div class="slide slide1"></div>
+    <div class="slide slide2"></div>
+    <div class="slide slide3"></div>
+    <div class="slide slide4"></div>
+
+    <!-- OVERLAY -->
+    <div class="overlay"></div>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="logo">ETHNIC HUB</div>
+
+        <div class="nav-links">
+            <a href="project.html">Home</a>
+            <a href="WOMEN.HTML">WOMEN</a>
+            <a href="mens.html">MENS</a>
+            <a href="KIDS.HTML">KIDS</a>
+            
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero">
+        <h1>New Fashion Collection</h1>
+        <p>Style That Defines Your Personality</p>
+        
+    </div>
+
+    <!-- DOTS -->
+    <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+</header>
+
+<!-- OPTIONAL SECTION -->
+
+<section class="section">
+    <h2>Trending Fashion Store</h2>
+
+    <p>
+        Discover premium fashion collections with modern designs,
+        stylish outfits, and luxury accessories for every season.
+        Experience the perfect blend of elegance and comfort.
+    </p>
+</section>
+
+
+<!-- Saree Types -->
+<section class="types">
+<h2>Types of Sarees</h2>
+<div class="saree-grid">
+
+<div class="card">
+<img src="silk.webp">
+<p>silk saree</p>
+</div>
+
+<div class="card">
+<img src="cottan.webp">
+<p>Cotton Saree</p>
+</div>
+
+<div class="card">
+<img src="design.webp">
+<p>Designer Saree</p>
+</div>
+
+<div class="card">
+<img src="wedd.webp">
+<p>Wedding Saree</p>
+</div>
+
+
+
+</section>
+
+<!-- modern Types -->
+<section class="types">
+
+<h2>Types of modern dress</h2>
+
+<div class="saree-grid">
+
+<div class="card">
+<img src="mode1.webp">
+<p>jeans and top</p>
+</div>
+
+<div class="card">
+<img src="short.webp">
+<p>short frock</p>
+</div>
+
+<div class="card">
+<img src="kut.jpg">
+<p>fashion wear</p>
+</div>
+
+<div class="card">
+<img src="halfff.avif">
+<p>half kurti</p>
+</div>
+
+
+</body>
+</html>

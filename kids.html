@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saree Store</title>
+<link rel="stylesheet" href="project.css">
+
+</head>
+
+<body>
+
+<!-- Header -->
+<header>
+    <div class="logo">ETHNIC HUB</div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="women.html">WOMEN</a></li>
+            <li><a href="mens.html">MEN</a></li>
+            <li><a href="kids.html">KIDS</a></li>
+        </ul>
+    </nav>
+  </div>
+    </header>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kids Store</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#f8f8f8;
+      color:#333;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* ================= HEADER ================= */
+
+    header{
+      background:#fff;
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 0;
+    }
+
+    .search-box input{
+      padding:10px 16px;
+      width:220px;
+      border:1px solid #ddd;
+      border-radius:30px;
+      outline:none;
+    }
+
+    .logo{
+      font-size:32px;
+      font-weight:700;
+      color:#53a8ff;
+    }
+
+    .logo span{
+      color:#ff73aa;
+    }
+
+    .icons{
+      display:flex;
+      gap:18px;
+      font-size:20px;
+    }
+
+    nav{
+      background:#66b2ff;
+    }
+
+    nav ul{
+      display:flex;
+      justify-content:center;
+      list-style:none;
+      gap:40px;
+      padding:16px 0;
+    }
+
+    nav a{
+      color:#fff;
+      font-weight:500;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero{
+      background:#dff1ff;
+      padding:80px 0;
+      overflow:hidden;
+    }
+
+    .hero-wrapper{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:40px;
+      flex-wrap:wrap;
+    }
+
+    .hero-text{
+      flex:1;
+      min-width:300px;
+    }
+
+    .hero-text h1{
+      font-size:56px;
+      line-height:1.2;
+      color:#284766;
+      margin-bottom:20px;
+    }
+
+    .hero-text p{
+      color:#666;
+      line-height:1.8;
+      margin-bottom:30px;
+      max-width:500px;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#ff73aa;
+      color:#fff;
+      padding:14px 34px;
+      border-radius:30px;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#ff4f93;
+    }
+
+    .hero-image{
+      flex:1;
+      text-align:center;
+      min-width:300px;
+    }
+
+    .hero-image img{
+      width:100%;
+      max-width:520px;
+    }
+
+    /* ================= SECTION ================= */
+
+    section{
+      padding:80px 0 30px;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title h2{
+      font-size:40px;
+      color:#284766;
+      margin-bottom:10px;
+    }
+
+    .section-title p{
+      color:#999;
+    }
+
+    /* ================= CARDS ================= */
+
+    .shop-box{
+      background:#fff;
+      padding:35px;
+      border-radius:18px;
+      margin-bottom:40px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    .shop-box h3{
+      margin-bottom:30px;
+      color:#284766;
+      font-size:28px;
+    }
+
+    .card-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:#fafafa;
+      border-radius:14px;
+      padding:20px;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 10px 20px rgba(0,0,0,0.08);
+    }
+
+    .card img{
+      width:100%;
+      height:180px;
+      object-fit:cover;
+      border-radius:12px;
+      margin-bottom:15px;
+    }
+
+    .card h4{
+      font-size:18px;
+      color:#333;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer{
+      background:#284766;
+      color:#fff;
+      text-align:center;
+      padding:25px 0;
+      margin-top:60px;
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media(max-width:768px){
+
+      .hero-text h1{
+        font-size:40px;
+      }
+
+      nav ul{
+        gap:20px;
+        flex-wrap:wrap;
+      }
+
+      .topbar{
+        flex-direction:column;
+        gap:20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container topbar">
+
+      <div class="search-box">
+        <input type="text" placeholder="Search Here">
+      </div>
+
+      <div class="logo">
+        Kid<span>X</span>Store
+      </div>
+
+      <div class="icons">
+        <span>♡</span>
+        <span>🛒</span>
+      </div>
+
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Pages</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-wrapper">
+
+      <div class="hero-text">
+        <h1>Fully Prepared For Baby</h1>
+
+        <p>
+          Discover adorable baby products, toys, clothing,
+          and accessories designed with comfort and joy in mind.
+        </p>
+
+        <a href="#" class="btn">Explore</a>
+      </div>
+
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=1200&auto=format&fit=crop" alt="Kids">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WAY TO SHOP -->
+  <section>
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Way To Shop</h2>
+        <p>Shop by age and favorite character</p>
+      </div>
+
+      <!-- SHOP BY AGE -->
+      <div class="shop-box">
+
+        <h3>Shop By Age</h3>
+
+        <div class="card-grid">
+
+          <div class="card">
+            <img src="Happy.jpg">
+            <h4>0 - 2 Year</h4>
+          </div>
+
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?q=80&w=800&auto=format&fit=crop">
+            <h4>2 - 4 Year</h4>
+          </div>
+
+          <div class="card">
+            <img src="girl.webp">
+            <h4>4 - 8 Year</h4>
+          </div>
+
+          <div class="card">
+            <img src="years.webp">
+            <h4>8 - 10 Year</h4>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SHOP BY CHARACTER -->
+      <div class="shop-box">
+
+        <h3>Shop By Character</h3>
+
+        <div class="card-grid">
+
+          <div class="card">
+            <img src="BARBIE.jpg">
+            <h4>Barbie</h4>
+          </div>
+
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=800&auto=format&fit=crop">
+            <h4>Marvel</h4>
+          </div>
+
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?q=80&w=800&auto=format&fit=crop">
+            <h4>Lucky Luke</h4>
+          </div>
+
+          <div class="card">
+            <img src="kidddd.webp">
+            <h4>Disney Princess</h4>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 KidX Store. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

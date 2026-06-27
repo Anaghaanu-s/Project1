@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saree Store</title>
+<link rel="stylesheet" href="project.css">
+
+</head>
+
+<body>
+
+<!-- Header -->
+<!-- <header>
+    <div class="logo">ETHNIC HUB</div>
+
+    <nav>
+        <ul>
+            <li><a href="project.html">HOME</a></li>
+            <li><a href="WOMEN.HTML">WOMEN</a></li>
+            <li><a href="men.html">MEN</a></li>
+            <li><a href="KIDS.HTML">KIDS</a></li>
+        </ul>
+    </nav>
+  </div>
+    </header> -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elegance Women Wear</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    body{
+      background:#f5f5f5;
+      color:#111;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    /* TOP BAR */
+    .top-bar{
+      background:#000;
+      color:#fff;
+      padding:10px 40px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      font-size:13px;
+    }
+
+    .social-icons i{
+      margin-right:15px;
+      cursor:pointer;
+    }
+
+    .shipping{
+      font-weight:500;
+      letter-spacing:1px;
+    }
+
+    .lang{
+      cursor:pointer;
+    }
+
+    /* NAVBAR */
+    .navbar{
+      background:#fff;
+      padding:18px 40px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      border-bottom:1px solid #eee;
+    }
+
+    .nav-left,
+    .nav-right{
+      display:flex;
+      align-items:center;
+      gap:30px;
+    }
+
+    .nav-left a{
+      font-size:14px;
+      font-weight:500;
+    }
+
+    .logo{
+      text-align:center;
+      line-height:1;
+    }
+
+    .logo h1{
+      font-size:38px;
+      font-weight:300;
+      letter-spacing:2px;
+    }
+
+    .logo span{
+      color:#ff0055;
+      font-weight:700;
+    }
+
+    .search-box{
+      position:relative;
+    }
+
+    .search-box input{
+      padding:10px 40px 10px 15px;
+      border:1px solid #ddd;
+      border-radius:30px;
+      outline:none;
+      width:220px;
+    }
+
+    .search-box button{
+      position:absolute;
+      right:0;
+      top:0;
+      height:100%;
+      width:40px;
+      border:none;
+      background:#ff0055;
+      color:#fff;
+      border-radius:50%;
+      cursor:pointer;
+    }
+
+    .nav-icons i{
+      margin-left:20px;
+      cursor:pointer;
+      font-size:18px;
+    }
+
+    /* HERO */
+    .hero{
+      height:600px;
+      background:url("womenn.webp") center/cover no-repeat;
+      position:relative;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.35);
+    }
+
+    .hero-content{
+      position:relative;
+      color:#fff;
+      z-index:2;
+    }
+
+    .hero-content h2{
+      font-size:60px;
+      font-weight:300;
+    }
+
+    .hero-content h3{
+      font-size:50px;
+      margin-bottom:30px;
+    }
+
+    .hero-content button{
+      background:#ff0055;
+      color:#fff;
+      border:none;
+      padding:14px 35px;
+      font-size:16px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .hero-content button:hover{
+      background:#d90049;
+    }
+
+    /* SALES */
+    .sales{
+      padding:70px 60px;
+      background:#f3f3f3;
+      text-align:center;
+    }
+
+    .sales h2{
+      font-size:50px;
+      margin-bottom:30px;
+      font-weight:700;
+    }
+
+    .tabs{
+      display:flex;
+      justify-content:center;
+      gap:40px;
+      margin-bottom:50px;
+      flex-wrap:wrap;
+    }
+
+    .tabs button{
+      padding:10px 25px;
+      border:1px solid #ccc;
+      background:#fff;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .tabs button.active,
+    .tabs button:hover{
+      background:#000;
+      color:#fff;
+    }
+
+    /* PRODUCTS */
+    .products{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .product-card{
+      background:#fff;
+      padding:20px;
+      position:relative;
+      transition:0.3s;
+    }
+
+    .product-card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .badge{
+      position:absolute;
+      top:15px;
+      left:15px;
+      background:#00b33c;
+      color:#fff;
+      font-size:12px;
+      padding:4px 10px;
+      font-weight:600;
+    }
+
+    .discount{
+      background:#ff003c;
+    }
+
+    .product-card img{
+      width:100%;
+      height:320px;
+      object-fit:cover;
+    }
+
+    .product-name{
+      margin-top:15px;
+      font-size:15px;
+    }
+
+    .price{
+      margin-top:10px;
+    }
+
+    .old-price{
+      text-decoration:line-through;
+      color:#888;
+      margin-right:10px;
+    }
+
+    .new-price{
+      color:#ff003c;
+      font-weight:700;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+
+      .navbar{
+        flex-direction:column;
+        gap:20px;
+      }
+
+      .nav-left{
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      .hero-content h2{
+        font-size:40px;
+      }
+
+      .hero-content h3{
+        font-size:32px;
+      }
+    }
+
+    @media(max-width:600px){
+
+      .top-bar{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+      }
+
+      .hero{
+        height:450px;
+      }
+
+      .hero-content h2{
+        font-size:30px;
+      }
+
+      .hero-content h3{
+        font-size:24px;
+      }
+
+      .sales{
+        padding:50px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="social-icons">
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-linkedin-in"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
+     <div class="logo">ETHNIC HUB</div>
+
+    <div class="shipping">
+      FREE SHIPPING ON US ORDERS $50+ & FREE EXCHANGES
+    </div>
+
+    
+  </div>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+
+    <div class="nav-left">
+
+      <a href="index.html">Home</a>
+            <a href="WOMEN.HTML">WOMEN</a>
+            <a href="mens.html">men</a>
+            <a href="KIDS.HTML">kids</a>
+            
+      <!-- <a href="#">MEN</a>
+      <a href="#">WOMEN</a>
+      <a href="#">ACCESSORIES</a>
+      <a href="#">BLOG</a>
+      <a href="#">CONTACT</a> -->
+
+
+    </div>
+
+    <!--  -->
+
+    <div class="nav-right">
+
+      <div class="search-box">
+        <input type="text" placeholder="Search">
+        <button>
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+
+      <div class="nav-icons">
+        <i class="fa-regular fa-user"></i>
+        <i class="fa-regular fa-heart"></i>
+        <i class="fa-solid fa-bag-shopping"></i>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Curated Elegance</h2>
+      <h3>For Every Occasion</h3>
+      <button>Shop Now</button>
+    </div>
+  </section>
+
+  <!-- SALES SECTION -->
+  <section class="sales">
+
+    <h2>BIG SALES</h2>
+
+    <div class="tabs">
+      <button class="active">Women</button>
+      <button>Men</button>
+      <button>Kids</button>
+      <button>Accessories</button>
+    </div>
+
+    <div class="products">
+
+      <!-- Product 1 -->
+      <div class="product-card">
+        <span class="badge">NEW</span>
+
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800&auto=format&fit=crop" alt="">
+
+        <div class="product-name">
+          Africa - Vestido midi a rayas cont
+        </div>
+
+        <div class="price">
+          <span class="old-price">$39.99</span>
+          <span class="new-price">$29.99</span>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop" alt="">
+
+        <div class="product-name">
+          Africa - Vestido midi a rayas cont
+        </div>
+
+        <div class="price">
+          <span class="old-price">$39.99</span>
+          <span class="new-price">$29.99</span>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <span class="badge discount">20% OFF</span>
+
+        <img src="https://images.unsplash.com/photo-1495385794356-15371f348c31?q=80&w=800&auto=format&fit=crop" alt="">
+
+        <div class="product-name">
+          Africa - Vestido midi a rayas cont
+        </div>
+
+        <div class="price">
+          <span class="old-price">$39.99</span>
+          <span class="new-price">$29.99</span>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+     
+       <div class="product-card">
+        <span class="badge discount">20% OFF</span>
+
+        <img src="images (12).jpg" alt="">
+
+        <div class="product-name">
+          Africa - Vestido midi a rayas cont
+        </div>
+
+        <div class="price">
+          <span class="old-price">$39.99</span>
+          <span class="new-price">$29.99</span>
+        </div>
+      </div>
+</body>
+</html>
